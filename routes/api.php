@@ -19,3 +19,4 @@ Route::post('resep-by-id',[ResepController::class,'getById']);
 Route::post('module-by-id',[ModuleController::class,'ModuleById']);
 Route::get('resep',[ResepController::class,'index']);
 Route::get('home',[ResepController::class,'PopularAndLatest']);
+Route::post('avatar',[PasienController::class,'avatarUpdate']);
