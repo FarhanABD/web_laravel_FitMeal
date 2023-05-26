@@ -33,13 +33,15 @@
     <link rel="stylesheet" href="{{ asset('adminlte/plugins/summernote/summernote-bs4.min.css') }}">
 </head>
 
+<link rel="icon" type="image/png" href="{{ asset('assets/logofitmeal.png') }}">
+
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
 
         <!-- Preloader -->
         <div class="preloader flex-column justify-content-center align-items-center">
-            <img class="animation__shake" src="{{ asset('adminlte/dist/img/AdminLTELogo.png') }}" alt="AdminLTELogo"
-                height="60" width="60">
+            <img class="animation__shake" src="{{ asset('assets/logofitmeal.png') }}" alt="AdminLTELogo" height="60"
+                width="60">
         </div>
 
         <!-- Navbar -->
@@ -69,7 +71,7 @@
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-success elevation-4">
             <!-- Brand Logo -->
-            <a href="index3.html" class="brand-link">
+            <a href="#" class="brand-link">
                 <img src="{{ asset('adminlte/dist/img/fitmeal.png') }}" alt="AdminLTE Logo"
                     class="brand-image img-circle elevation-3" ">
                 <span class=" brand-text font-weight-light">Fitmeal Web</span>
@@ -80,11 +82,15 @@
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
-                        <img src="{{ asset('adminlte/dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2"
+                        @if($user->avatar)
+                        <img src="{{ asset('avatar/'.$user->avatar) }}" class="img-circle elevation-2" alt="User Image">
+                        @else
+                        <img src="{{ asset('adminlte/dist/img/profile.jpg') }}" class="img-circle elevation-2"
                             alt="User Image">
+                        @endif
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">{{ Auth::user()->name }}</a>
+                        <a href="/profile" class="d-block">{{ Auth::user()->name }}</a>
                     </div>
                 </div>
 
@@ -123,21 +129,30 @@
                 <div class="container-fluid">
                     @yield('content')
                 </div><!-- /.container-fluid -->
-            </section>
-            <!-- /.content -->
+
+
         </div>
-        <!-- /.content-wrapper -->
-        <footer class="main-footer">
-            <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
-            All rights reserved.
-            <div class="float-right d-none d-sm-inline-block">
+    </div>
+    </div>
+    </div>
+    </section>
+    <!-- /.content -->
+    </div>
+
+
+
+    <!-- /.content-wrapper -->
+    <footer class="main-footer">
+        <strong>Website <a href="#">RSUD RA Basoeni</a>.</strong>
+
+        <!-- <div class="float-right d-none d-sm-inline-block">
                 <b>Version</b> 3.1.0
-            </div>
-        </footer>
+            </div> -->
+    </footer>
 
-        <!-- Control Sidebar -->
+    <!-- Control Sidebar -->
 
-        <!-- /.control-sidebar -->
+    <!-- /.control-sidebar -->
     </div>
     <!-- ./wrapper -->
 
