@@ -68,7 +68,11 @@ Pasien Page
                             <td>{{ $row->berat_badan }}</td>
                             <td>{{ $row->tinggi_badan }}</td>
                             <td>{{ $row->usia }}</td>
+<<<<<<< HEAD
                             <td><img src="{{ asset('public/uploads/'.$row->avatar) }}" width="70px" class="thumbnail" /></td>
+=======
+                            <td><img src="{{ asset('uploads/'.$row->avatar) }}" width="70px" class="thumbnail" /></td>
+>>>>>>> f6efe57eb207128b196370711e4d074e3c31abf2
                             <td>{{ $row->status}}</td>
                             <td>
                                 <a href="{{ route('pasien.edit',[$row->id]) }}" class="btn btn-info btn-sm">Edit</a>

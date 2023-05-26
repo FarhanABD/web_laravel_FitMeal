@@ -82,10 +82,14 @@
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
+<<<<<<< HEAD
                         @if($user->avatar)
                         <img src="{{ asset('avatar/'.$user->avatar) }}" class="img-circle elevation-2" alt="User Image">
                         @else
                         <img src="{{ asset('adminlte/dist/img/profile.jpg') }}" class="img-circle elevation-2"
+=======
+                        <img src="{{ asset('uploads/'.Auth::user()->avatar) }}" class="img-circle elevation-2"
+>>>>>>> f6efe57eb207128b196370711e4d074e3c31abf2
                             alt="User Image">
                         @endif
                     </div>

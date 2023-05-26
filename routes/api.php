@@ -11,6 +11,10 @@ use App\Http\Controllers\Api\ModuleController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+<<<<<<< HEAD
+=======
+
+>>>>>>> f6efe57eb207128b196370711e4d074e3c31abf2
 Route::get('category',[CategoryController::class,'getAll']);
 Route::post('login',[PasienController::class,'login']);
 Route::post('resep-by-category',[ResepController::class,'getByCategory']);

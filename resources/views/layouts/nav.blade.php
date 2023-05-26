@@ -86,10 +86,12 @@
                         <p>Resep</p>
                     </a>
                 </li>
+
             </ul>
         </li>
         @endif
 
+<<<<<<< HEAD
         <li class="nav-item ">
             <a href="/profile" class="nav-link">
                 <i class='bx bxs-widget'></i>
@@ -99,6 +101,37 @@
                 </p>
             </a>
             
+=======
+
+        @if(Auth::user()->level == "chef")
+        <li class="nav-item ">
+            <a href="#" class="nav-link">
+                <i class='bx bxs-widget'></i>
+                <p>
+                    Master
+                    <!-- <i class="right fas fa-angle-left"></i> -->
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="{{ route('module') }}" class="nav-link">
+                        <i class='bx bx-radio-circle'></i>
+                        <p>
+                            Modules
+
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('resep.index') }}" class="nav-link">
+                        <i class='bx bx-radio-circle'></i>
+                        <p>Resep</p>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        @endif
+>>>>>>> f6efe57eb207128b196370711e4d074e3c31abf2
 
         <li class="nav-item">
             <form action="{{ route('signout') }}"  id="signout">

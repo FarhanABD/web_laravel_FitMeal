@@ -12,7 +12,11 @@ Category Page
             </div>
             <div class="card-body table-responsive">
                 @include('alert.success')
+<<<<<<< HEAD
                 @if(Auth::user()->level == "admin")
+=======
+                @if(Auth::user()->level == "chef")
+>>>>>>> f6efe57eb207128b196370711e4d074e3c31abf2
                 <a href="{{ route('category.create') }}" class="btn btn-success">Tambah</a>
                 @endif
                 <hr>
@@ -47,7 +51,11 @@ Category Page
                                     width="150px">
                             </td>
                             <td>
+<<<<<<< HEAD
                                 @if(Auth::user()->level == "admin")
+=======
+                                @if(Auth::user()->level == "chef")
+>>>>>>> f6efe57eb207128b196370711e4d074e3c31abf2
                                 <a href="{{ route ('category.edit',[$row->id]) }}" class="btn btn-info btn-sm">Edit</a>
                                 <form action="{{ route('category.destroy',[$row->id]) }}" method="post"
                                     onsubmit="return confirm('Move Category To Trash')" class="d-inline">
